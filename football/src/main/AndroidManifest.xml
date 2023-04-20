@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidMultiTriviaApp">
         <activity
-            android:name="com.example.football.MainActivity"
+            android:name="com.roman.football.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.AndroidMultiTriviaApp">
             <intent-filter>
