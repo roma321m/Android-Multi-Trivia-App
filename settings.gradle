@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "Android-Multi-Trivia-App"
 include ':common'
 include ':football'
+include ':cars'

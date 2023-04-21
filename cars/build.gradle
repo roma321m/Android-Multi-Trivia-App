@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.roman.football'
+    namespace 'com.roman.cars'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.roman.football"
+        applicationId "com.roman.cars"
         minSdk 28
         targetSdk 33
         versionCode 1

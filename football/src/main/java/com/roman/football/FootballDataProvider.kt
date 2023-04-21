@@ -1,7 +1,6 @@
 package com.roman.football
 
 import com.roman.android_multi_trivia_app.domain.DataProvider
-import com.example.myapplication.R
 import com.roman.android_multi_trivia_app.data.model.AnswerModel
 
 object FootballDataProvider : DataProvider {

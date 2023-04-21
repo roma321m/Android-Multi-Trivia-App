@@ -1,7 +1,6 @@
 package com.roman.football
 
 import com.roman.android_multi_trivia_app.domain.Resources
-import com.example.myapplication.R
 
 class FootballResources : Resources {
     override val icon: Int

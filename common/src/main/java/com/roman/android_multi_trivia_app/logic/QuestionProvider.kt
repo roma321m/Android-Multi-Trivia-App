@@ -5,6 +5,7 @@ import com.roman.android_multi_trivia_app.data.model.AnswerModel
 import com.roman.android_multi_trivia_app.data.model.QuestionModel
 import kotlin.random.Random
 
+
 object QuestionProvider {
 
     fun provide(answers: List<AnswerModel>): List<QuestionModel> {
@@ -17,7 +18,9 @@ object QuestionProvider {
         val questions = mutableListOf<QuestionModel>()
 
         options.forEach {
-            val answersForOneQuestion = mutableSetOf(it.key)
+            val rightAnswer = it.key
+            val icon = it.value
+            val answersForOneQuestion = mutableSetOf(rightAnswer)
             while (answersForOneQuestion.size != 4) {
                 answersForOneQuestion.add(options.entries.elementAt(Random.nextInt(options.size)).key)
             }
@@ -28,8 +31,8 @@ object QuestionProvider {
                     answerTwo = shuffledAnswers.elementAt(1),
                     answerThree = shuffledAnswers.elementAt(2),
                     answerFour = shuffledAnswers.elementAt(3),
-                    answerFive = it.key,
-                    icon = it.value
+                    answerFive = rightAnswer,
+                    icon = icon
                 )
             )
         }

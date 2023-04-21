@@ -36,7 +36,7 @@ class CommonMainViewModel(
     }
 
     private val answers = dataProvider.provide()
-    private val questions: List<QuestionModel> get() = questionProvider.provide(answers)
+    private var questions: List<QuestionModel> = questionProvider.provide(answers)
 
     private var index = 0
     var currentQuestionModel by mutableStateOf(
@@ -82,9 +82,10 @@ class CommonMainViewModel(
     }
 
     private fun newGame() {
+        questions = questionProvider.provide(answers)
         score = 0
-        isMenu = false
         index = 0
+        isMenu = false
     }
 
     private fun checkAnswer(answer: String) {
